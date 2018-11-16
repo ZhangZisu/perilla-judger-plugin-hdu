@@ -1,5 +1,4 @@
 import { readFileSync, statSync } from "fs";
-import { JSDOM } from "jsdom";
 import { Browser, launch } from "puppeteer";
 import { ISolution, JudgeFunction, Problem, Solution, SolutionResult } from "./interfaces";
 
