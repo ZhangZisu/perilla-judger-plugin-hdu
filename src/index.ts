@@ -1,11 +1,13 @@
 import { readFileSync, statSync } from "fs";
+import { join } from "path";
 import { Browser, launch } from "puppeteer";
 import { ISolution, JudgeFunction, Problem, Solution, SolutionResult } from "./interfaces";
 
 const MAX_SOURCE_SIZE = 16 * 1024 * 1024;
 const UPDATE_INTERVAL = 5000;
 
-const config = JSON.parse(readFileSync("config.json").toString());
+const configPath = join(__dirname, "..", "config.json");
+const config = JSON.parse(readFileSync(configPath).toString());
 let browser: Browser = null;
 
 const isLoggedIn = async () => {
