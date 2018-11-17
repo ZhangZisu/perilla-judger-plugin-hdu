@@ -5,5 +5,12 @@
   },
   "devDependencies": {
     "@types/puppeteer": "^1.10.0"
-  }
+  },
+  "name": "perilla-judger-plugin-hdu",
+  "version": "1.0.0",
+  "description": "perilla-judger-plugin-hdu",
+  "main": "dist/index.js",
+  "repository": "https://github.com/ZhangZisu/perilla-judger-plugin-hdu.git",
+  "author": "ZhangZisu <admin@zhangzisu.cn>",
+  "license": "MIT"
 }
