@@ -122,7 +122,7 @@ const fetch = async (runID: number) => {
         const result: ISolution = {
             status,
             score,
-            details: {},
+            details: { runID },
         };
         await page.close();
         return result;
@@ -141,7 +141,7 @@ const updateSolutionResults = async () => {
                 updateMap.delete(runid);
             }
         } catch (e) {
-            cb({ status: SolutionResult.JudgementFailed, score: 0, details: { error: e.message } });
+            cb({ status: SolutionResult.JudgementFailed, score: 0, details: { error: e.message, runID: runid } });
         }
     }
     setTimeout(updateSolutionResults, UPDATE_INTERVAL);

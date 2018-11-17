@@ -53,4 +53,5 @@ export const Solution = Record({
 
 export interface IDetails {
     error?: string;
+    runID?: number;
 }
